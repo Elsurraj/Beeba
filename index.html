@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/logo.jpg" >
+  <title>Happy Birthday Habebitullah 🎉</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: '100vh';
+      background: radial-gradient(circle at top, #ffb6c1, #ff69b4, #c71585);
+      overflow: '';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff00de;
+      animation: glow 3s ease-in-out infinite alternate;
+      padding: 0 10px;
+      margin-top: 20px;
+      font-family:cursive;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff, 0 0 20px #ff00de; }
+      to { text-shadow: 0 0 30px #fff, 0 0 60px #ff00de; }
+    }
+
+    .message {
+      font-size: 1.1em;
+      margin-top: 15px;
+      width: 85%;
+      line-height: 1.7;
+      color: #fffafc;
+      animation: fadeIn 2s ease-in forwards;
+      padding: 0 40px;
+      text-align: justify;
+      margin-top: 25px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .photo {
+      width: 194px;
+      height: 194px;
+      border-radius: 15%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+      object-fit: cover;
+      margin-bottom: 30px
+      transform: scale(1);
+      animation: float 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0px); }
+      to { transform: translateY(-15px); }
+    }
+
+    .hidden-message {
+      display: none;
+      margin-top: 25px;
+      font-size: 1.1em;
+      color: #fff;
+      background: rgba(255, 192, 203, 0.2);
+      border: 2px solid rgba(255,255,255,0.3);
+      padding: 20px;
+      border-radius: 20px;
+      width: 80%;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+      opacity: 0;
+      padding: 20px 40px;
+      text-align: justify;
+      margin-top: 25px;
+      line-height: 30px;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -100px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 50%;
+      animation: rise 10s infinite ease-in;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.3);
+        opacity: 0;
+      }
+    }
+
+    button {
+      margin-top: 25px;
+      background: linear-gradient(45deg, #ff1493, #ff69b4);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 105, 180, 0.9);
+    }
+
+    .media-container {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2em; }
+      .photo { width: 140px; height: 140px; }
+      .message { font-size: 1em; width: 90%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Replace these media files with your local ones -->
+  <div class="media-container">
+    <img src="images/img-1.jpg" alt="beeba Photo" class="photo">   
+    <img src="images/img-3.jpg" alt="beeba Photo" class="photo">  
+    <img src="images/img-4.jpg" alt="beeba Photo" class="photo"> 
+     <img src="images/img-2.jpg" alt="beeba Photo" class="photo">     
+    
+  </div>
+
+  <h1>🎂 Happy Birthday, Habeebatullah 🎉</h1>
+
+  <p class="message">
+  I hope today brings you the kind of happiness you effortlessly give to others. 
+    Your smile has a way of making moments feel lighter and more beautiful,
+    and I’m grateful to know someone with such a kind heart. May this new year
+    of your life be filled with peace, 
+    growth, laughter, and all the good things you truly deserve. 
+    Enjoy your special day 💫 💖✨
+  </p>
+
+  <button onclick="showLoveMessage()">Click Me 💌</button>
+  <br/><br/>
+  <div id="love-message" class="hidden-message">
+    💖 Dearest Habeebah 💖<br><br>
+        There’s something about you that makes moments feel softer 
+    and more meaningful. Your presence brings calm, your smile brings warmth, 
+    and your heart shows so much kindness. I hope today reminds you of how special
+    you are and how much beauty you bring into the
+    lives of those around you. May this new year treat you gently and beautifully 🤍
+    <div style="text-align-last: end;"><h6>Suraj</h6></div>
+  </div>
+
+  <!-- Background music (local file) -->
+  <audio id="bg-music" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Create floating bubbles
+    for (let i = 0; i < 25; i++) {
+      const bubble = document.createElement('div');
+      bubble.classList.add('bubble');
+      document.body.appendChild(bubble);
+      const size = Math.random() * 60 + 20;
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+      bubble.style.left = `${Math.random() * 100}%`;
+      bubble.style.animationDuration = `${Math.random() * 5 + 5}s`;
+      bubble.style.animationDelay = `${Math.random() * 5}s`;
+    }
+
+    // Handle autoplay permission (some browsers require interaction)
+    const music = document.getElementById('bg-music');
+    document.body.addEventListener('click', () => music.play());
+
+    // Soft fade-in effect for background music
+    const audio = document.getElementById("bg-music");
+    audio.volume = 0;
+    let fadeIn = setInterval(() => {
+      if (audio.volume < 0.3) {
+        audio.volume += 0.01;
+      } else {
+        clearInterval(fadeIn);
+      }
+    }, 200);
+
+    // Function to show love message smoothly
+    function showLoveMessage() {
+      const msgBox = document.getElementById('love-message');
+      msgBox.style.display = 'block';
+      setTimeout(() => {
+        msgBox.style.transition = 'opacity 2s ease';
+        msgBox.style.opacity = 1;
+      }, 100);
+    }
+    
+     // Toggle message visibility
+    function toggleMessage() {
+      const msg = document.getElementById("love-message");
+      msg.style.display = (msg.style.display === "none" || msg.style.display === "") 
+        ? "block" 
+        : "none";
+    }
+  </script>
+</body>
+</html>
